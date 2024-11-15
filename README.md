@@ -6,20 +6,23 @@
 A logistic regression model to predict the likelihood of an individual developing cardiovascular disease (CVD) in the next 10 years. This project focuses on preprocessing, class imbalance handling, hyperparameter tuning, and evaluating model performance using real-world health data.
 
 ## Table of Contents
-1.  [Overview](#overview)
-2.  [Dataset](#dataset)
-3.  [Exploratory Data Analysis](#eda)
-4.  [Results](#results)
-5.  [Conclusion](#conclusion)
+
+<ol>
+<li><a href="#Overview"><b> Overview </a></b></li>
+<li><a href="#Datasets"><b> Datasets </a></b></li>
+<li><a href="#EDA"><b> Exploratory Data Analysis </a></b></li>
+<li><a href="#overview"><b> Overview </a></b></li>
+</ol>
 
 
 
-## 1. Overview
+
+<h2 id="Overview">1. Overview</h2>
  WHO (World Health Organization) estimates that out of 5 deaths, 4 of them are realted to the cardiovascular disease(CVD), so the goal of this project is to use Logistic Regression to determine the propoertion of patients who are at a high risk of CVD. 
 
  This project focuses on preprocessing, class imbalance handling, hyperparameter tuning, and evaluating model performance using real-world health data.
 
-## 2. Dataset
+<h2 id="Datasets">2. Dataset</h2>
 The dataset has a total of:
  - Rows: 4240
  - Features: 16
@@ -37,5 +40,4 @@ The dataset has a total of:
 
 ![alt text](image-1.png)
 
-
-## 3. Exploratory Data Analysis:
+<h2 id="EDA">3. Exploratory Data Analysis</h2>
