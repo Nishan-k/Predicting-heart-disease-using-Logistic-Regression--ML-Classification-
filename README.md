@@ -11,6 +11,7 @@ A logistic regression model to predict the likelihood of an individual developin
 <li><a href="#Overview"><b> Overview </a></b></li>
 <li><a href="#Datasets"><b> Datasets </a></b></li>
 <li><a href="#EDA"><b> Exploratory Data Analysis </a></b></li>
+<li><a href="#featureengineering"><b> Feature Engineering </a></b></li>
 
 </ol>
 
@@ -23,9 +24,9 @@ A logistic regression model to predict the likelihood of an individual developin
  This project focuses on preprocessing, class imbalance handling, hyperparameter tuning, and evaluating model performance using real-world health data.
 
 <h2 id="Datasets">2. Dataset</h2>
-The dataset has a total of:
- - Rows: 4240
- - Features: 16
+The dataset has a total of:<br>
+ - Rows:  4240 <br>
+ - Features:  16
 
  Target Column: TenYearCHD (1 = Risk of CVD, 0 = No Risk)
 
@@ -69,4 +70,49 @@ When working with classification task, it is important to check if the class or 
 ![alt text](image-6.png)
 
 <b> There is a clear case of class imabalance here. </b>
+
+So, now we will use a technique called <b>Resampling </b> and keep it separately and later on test our model on the original imabalanced data and this newly oversampled data and compare the results.
+
+#### 3.4 Handling Class Imbalance:
+![alt text](image-7.png)
+
+so, the countplot below shows the count of the classes on the original and oversampled data.
+![alt text](image-8.png)
+
+<br>
+
+![alt text](image-9.png)
+
+
+<h2 id="featureengineering">4. Feature Engineering </h2>
+
+Here, first we will use the original dataset and then use the oversampled dataset.
+
+<h3> 4.1 On the original dataset</h3>
+1. First we will split the data into training and testing data so that we can use training data to build the model and test data to find the generalization of the model. <br>
+
+![alt text](image-11.png)
+2. We will use a <b>Pipeleine</b> so that it can automate the sequence of preprocessing steps and model training, ensuring consistency and reducing the risk of errors. <br>
+<br>
+<b>NOTE: </b>Here, we have only used 7 as the value for K in SelectKBest just for the testing purpose, later on when optimizing the hyperparameter, we will use differen variations.
+
+![alt text](image-10.png)
+
+Then we will fit the pipeline on X_train and y_train data. This is the split that we did in the first step on the original oversampled dataset.
+
+Once the model is trained, we will predict on the X_test data and compare the results. <br>
+<br>
+Since we are working with imbalanced dataset, accuracy alone cannot be used as the decision metrics on the generalization. Below is the result of the training and testing data:<br>
+
+![alt text](image-12.png)
+
+As we can see the accuracy on the training and testing data is quite high but it is not useful, we are looking at F1-Score, which is the generalization of Precision and Recall and are commonly used metrics for imbalanced dataset.
+
+<h3> 4.2 On the oversampled dataset</h3>
+- Similarly, we repeat the same process on the oversampled dataset. We will split the oversampled data in training and testing data and fit the model on the training data.
+
+![alt text](image-13.png)
+
+The metrics on the oversampled data:
+![alt text](image-14.png)
 
