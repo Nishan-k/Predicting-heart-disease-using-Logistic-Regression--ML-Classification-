@@ -211,5 +211,18 @@ We can use <b>joblib</b> to dump(save) and load the saved model for future predi
 
 <h2 id="conclusion">Conclusion </h2>
 
-Working with an imbalanced dataset is a challenging task, especially when its related to the domain
-like health. 
+Working with an imbalanced dataset is a challenging task, particularly in sensitive domains 
+like healthcare, where misclassifications can have significant consequences. Relying solely 
+on accuracy as a metric can be misleading, as it does not adequately capture the performance 
+of models on minority classes. Therefore, metrics like Precision, Recall, F1-score, and Area 
+Under the Precision-Recall Curve (PR-AUC) are more appropriate for evaluating model generalization 
+in such scenarios.
+
+In this project, I implemented a sampling technique to address class imbalance, but it’s 
+worth noting that several other methods, such as SMOTE, cost-sensitive learning, and ensemble 
+methods, could also be explored. Additionally, this project demonstrates the use of Logistic 
+Regression, one of the most popular algorithms for binary classification. However, experimenting 
+with other classification algorithms, such as Random Forest, Support Vector Machines, or Gradient 
+Boosting methods, could potentially yield even better results.
+
+
