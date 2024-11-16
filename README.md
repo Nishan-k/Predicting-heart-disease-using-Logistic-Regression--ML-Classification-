@@ -23,7 +23,7 @@ A logistic regression model to predict the likelihood of an individual developin
 
 
 <h2 id="Overview">1. Overview</h2>
- WHO (World Health Organization) estimates that out of 5 deaths, 4 of them are realted to the cardiovascular disease(CVD), so the goal of this project is to use Logistic Regression to determine the propoertion of patients who are at a high risk of CVD. 
+ WHO (World Health Organization) estimates that out of 5 deaths, 4 of them are realted to the cardiovascular disease(CVD), so the goal of this project is to use Logistic Regression to determine the proportion of patients who are at a high risk of CVD. 
 
  This project focuses on preprocessing, class imbalance handling, hyperparameter tuning, and evaluating model performance using real-world health data.
 
