@@ -114,5 +114,6 @@ As we can see the accuracy on the training and testing data is quite high but it
 ![alt text](images/image-13.png)
 
 The metrics on the oversampled data:
+
 ![alt text](images/image-14.png)
 
