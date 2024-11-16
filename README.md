@@ -176,6 +176,7 @@ Here, also we will repeat the same process as above but on the oversampled datas
 <b> Print the metrics: </b>
 
 ![alt text](image-6.png)
+
 ![alt text](image-7.png)
 
 The metrics shows, using the oversampled data, we got better results.
