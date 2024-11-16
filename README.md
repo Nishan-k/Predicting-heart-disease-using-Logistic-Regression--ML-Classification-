@@ -12,7 +12,11 @@ A logistic regression model to predict the likelihood of an individual developin
 <li><a href="#Datasets"><b> Datasets </a></b></li>
 <li><a href="#EDA"><b> Exploratory Data Analysis </a></b></li>
 <li><a href="#featureengineering"><b> Feature Engineering </a></b></li>
-
+<li><a href="#summary"><b> Summary Till Now </a></b></li>
+<li><a href="#tuning"><b> Model Tuning </a></b></li>
+<li><a href="#finalization"><b> Model Finalization </a></b></li>
+<li><a href="#saveload"><b> Saving & Loading the Model </a></b></li>
+<li><a href="#conclusion"><b> Conclusion </a></b></li>
 </ol>
 
 
@@ -117,3 +121,95 @@ The metrics on the oversampled data:
 
 ![alt text](images/image-14.png)
 
+Although the accuracy is low in the oversampled dataset, the F1-score is better than that of the original dataset.
+But still, we will tune hyperparameter for both, the original and the oversampled dataset, then compare the metrics and only select the final hyperparameters and select the dataset that we want to finalize 
+to train our final model.
+
+<h2 id="summary">5. Summary Till Now </h2>
+
+- We tried out with both the orignal and oversampled data, but the original data is outperformed.
+
+
+- Accuracy alone cannot be used to determine the quality of the model.
+
+
+- Now, we could try other ensemble models but since we are just focusing on Logistic Regression, we will further proceed 
+with GridSeachCV, where we will optimize our model to find the best hyper-parameter.
+
+
+<h2 id="tuning">6. Model Tuning</h2>
+
+To find the best hyperparameters, we will use <b>GridSeachCV</b>.
+
+We will use these parameter grid:
+
+![alt text](images/image15.png)
+
+
+#### 6.1 Fit the gird search on the original dataset:
+
+![alt text](image.png)
+
+<b> Print the best hyperparameters: </b>
+
+![alt text](image-1.png)
+
+<b> Print the metrics: </b>
+
+![alt text](image-2.png)
+
+![alt text](image-3.png)
+
+There is no any improvement on the F1-score.
+
+#### 6.2 Fit the gird search on the oversampled dataset:
+
+Here, also we will repeat the same process as above but on the oversampled dataset.
+
+![alt text](image-4.png)
+
+<b> Print the best hyperparameters: </b>
+
+![alt text](image-5.png)
+
+
+<b> Print the metrics: </b>
+
+![alt text](image-6.png)
+![alt text](image-7.png)
+
+The metrics shows, using the oversampled data, we got better results.
+
+<h2 id="finalization">7. Model Finalization </h2>
+
+So, we are done with finding the best hyperparameters and we also saw that oversampling the data was the best idea as this was imbalanced dataset, using metrics like Accuracy alone is not an effective way to finalize the model. So, we had to compare other metrics like precision, recall, and F1-score.
+
+#### 7.1 Selecting the best estimators:
+![alt text](image-8.png)
+
+
+#### 7.2 Fitting entire dataset on the final model:
+![alt text](image-9.png)
+
+
+
+<h2 id="saveload"> 8. Saving & Loading the Model:</h2>
+
+We can use <b>joblib</b> to dump(save) and load the saved model for future predicitons.
+
+#### 8.1 Save the model:
+
+![alt text](image-10.png)
+
+#### 8.2 Load the model:
+![alt text](image-11.png)
+
+#### 8.3 Make Predictions:
+![alt text](image-12.png)
+
+
+
+<h2 id="conclusion">Conclusion </h2>
+
+Working with an imbalanced dataset is a challenging task, especially when its related to the domain
+like health. 
