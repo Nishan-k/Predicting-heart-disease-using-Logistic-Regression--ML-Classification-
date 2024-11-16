@@ -209,7 +209,7 @@ We can use <b>joblib</b> to dump(save) and load the saved model for future predi
 
 
 
-<h2 id="conclusion">Conclusion </h2>
+<h2 id="conclusion">9. Conclusion </h2>
 
 Working with an imbalanced dataset is a challenging task, particularly in sensitive domains 
 like healthcare, where misclassifications can have significant consequences. Relying solely 
