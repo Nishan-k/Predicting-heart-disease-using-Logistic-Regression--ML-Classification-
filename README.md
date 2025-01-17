@@ -148,17 +148,17 @@ We will use these parameter grid:
 
 #### 6.1 Fit the gird search on the original dataset:
 
-![alt text](image.png)
+![alt text](images/image16.png)
 
 <b> Print the best hyperparameters: </b>
 
-![alt text](image-1.png)
+![alt text](images/image17.png)
 
 <b> Print the metrics: </b>
 
-![alt text](image-2.png)
+![alt text](images/image18.png)
 
-![alt text](image-3.png)
+![alt text](images/image19.png)
 
 There is no any improvement on the F1-score.
 
@@ -166,18 +166,18 @@ There is no any improvement on the F1-score.
 
 Here, also we will repeat the same process as above but on the oversampled dataset.
 
-![alt text](image-4.png)
+![alt text](images/image20.png)
 
 <b> Print the best hyperparameters: </b>
 
-![alt text](image-5.png)
+![alt text](images/image21.png)
 
 
 <b> Print the metrics: </b>
 
-![alt text](image-6.png)
+![alt text](images/image22.png)
 
-![alt text](image-7.png)
+![alt text](images/image23.png)
 
 The metrics shows, using the oversampled data, we got better results.
 
@@ -186,11 +186,11 @@ The metrics shows, using the oversampled data, we got better results.
 So, we are done with finding the best hyperparameters and we also saw that oversampling the data was the best idea as this was imbalanced dataset, using metrics like Accuracy alone is not an effective way to finalize the model. So, we had to compare other metrics like precision, recall, and F1-score.
 
 #### 7.1 Selecting the best estimators:
-![alt text](image-8.png)
+![alt text](images/image24.png)
 
 
 #### 7.2 Fitting entire dataset on the final model:
-![alt text](image-9.png)
+![alt text](images/image25.png)
 
 
 
@@ -200,13 +200,13 @@ We can use <b>joblib</b> to dump(save) and load the saved model for future predi
 
 #### 8.1 Save the model:
 
-![alt text](image-10.png)
+![alt text](images/image26.png)
 
 #### 8.2 Load the model:
-![alt text](image-11.png)
+![alt text](images/image27.png)
 
 #### 8.3 Make Predictions:
-![alt text](image-12.png)
+![alt text](images/image28.png)
 
 
 
